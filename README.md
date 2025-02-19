@@ -14,10 +14,14 @@ It is recommended to install and run pip packages and notebook in a virtual envi
 * Install necessary packages for the environment: <b>Example:</b> ```pip install jupyter pandas```
 * Start notebook ```jupyter notebook```
 
-## Running virtual environment from separate folders
-* Open the project folder, right click and open in terminal
-* Activate virtual environment ```myenv\Scripts\activate```
-* Run jupyter notebook ```jupyter notebook```
+## Changing Jupyter default location
+* Find the derfault directory using ```jupyter --config-dir```
+* cd to the directory found in first step
+* If the jupyter_notebook_config.py file does not exist, create it by running: ```jupyter notebook --generate-config```
+* Navigate to the folder and Open the jupyter_notebook_config.py file in a text editor (e.g., Notepad or VS Code)
+* Scroll to bottom of file and add ```c.NotebookApp.notebook_dir = r"C:/path to your folder"```
+* Save and restart virtual environment and Jupyter
+
 
 
 
